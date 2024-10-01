@@ -306,7 +306,7 @@ if (empty($LeagueGeneral) == false){If ($LeagueGeneral['OffSeason'] == "True"){e
 .STHSPHPTeamStatDepthChart_Table td:nth-child(2){display:none;}
 #STHSPHPTeamStat_SubHeader {display:none;}
 }*/
-.tabmain-links a{font-size:18px;}
+.tabmain-links a{font-size:16px;}
 </style>
 <script>
 
