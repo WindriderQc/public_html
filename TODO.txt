@@ -1,0 +1,4 @@
+Fix trades qui ne fonctionne pas
+Fix Filtres dans players page qui ne fonctionne pas
+Enlever la div de logo de la version mobile
+
