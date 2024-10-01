@@ -1,10 +1,6 @@
 @media only screen and (max-width: 600px) {
-
     /* Styles for mobile devices */
-
 }
-
-
 
 
 
@@ -13,397 +9,195 @@
 /* -----#------------------------------------ */
 
 *,html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,label,fieldset,input,p,blockquote,th,td{margin:0; padding:0;}
-
 table{border-collapse:collapse;border-spacing:0;}
-
 fieldset,img {border:0 none;}
-
 address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
-
 ol,ul,li{list-style:none outside none;}
-
 caption,th{text-align:left;}
-
 table p{display: inline;}
-
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
-
 q:before,q:after{content:"";}
-
 a img { border:medium none;}
-
 img{border:medium none;display:block;}
-
 a{color: #000; text-decoration:none;}
-
 a:hover {color: #E7BF3A;}
-
 strong{font-weight: bold;}
-
 iframe{display: block;}
 
 
-
 .last { margin-right: 0!important; }
-
 .fl { float: left }
-
 .fr { float: right }
-
 .no-margin{ margin: 0!important; }
-
-.mt-50 { margin-top: 50px; }
-
 .no-border {border: none!important;}
+.mt-50 { margin-top: 50px; }
 
 .text-align-center { text-align: center!important;}
 
-.clearfix:after { clear: both; content: ""; display: block; height: 0; }
-
-
-
-nav ul>li>ul, .accordion-content
-
-{ transition:all 0ms;-moz-transition:all 0ms; /* Firefox 4 */-webkit-transition:all 0ms; /* Safari and Chrome */-o-transition:all 0ms; /* Opera */ }
-
-
 
 p { color: #444; line-height: 13px; line-height: 22px; font-family: 'Open Sans', Arial, sans-serif; }
-
-
-
 h1 { font-size: 40px; color: #2c2f36; font-weight: 600; text-transform: uppercase; }
-
 h2 { font-size: 30px; color: #2c2f36; font-weight: 300; text-transform: uppercase;}
-
 h3 { font-size: 22px; color: #2c2f36; font-weight: 400; text-transform: uppercase;}
-
 h4 { font-size: 16px; color: #2c2f36; font-weight: 400; }
-
 h5 { font-size: 15px; color: #2c2f36; font-weight: 400; }
-
 h6 { font-size: 13px; color: #2c2f36; font-weight: 400; }
-
 a h1:hover, a h2:hover {
-
 	color: #E7BF3A;
-
 }
+
 
 /************** Master ***************/
-
 /* ----------------------------------------- */
-
 /************** General Sections **************/
-
 body { 
-
 	font-family: 'teko', Open Sans, Arial, sans-serif;
-
 	font-size: 14px;
-
 }
-
-
-
-/*  SECTIONS  ============================================================================= */
-
-.center-container {
-
-	max-width: 1050px!important;
-
-	margin: 0 auto;
-
-}
-
-.center-content {
-
-	margin: 0 auto!important;
-
-	float: none!important;
-
-}
-
-
-
-section {
-
-	clear: both;
-
-	margin: 0px;
-
-}
-
-section:after { clear: both; content: ""; display: block; height: 0; }
-
-
-
-
-
 
 
 
 
 /*  NAV MOBILE   ============================================================================= */
-
-
-
-
-
 .button-menu li {
-
 	cursor: pointer;
-
 	color: #fff;
-
 	font-size: 30px;
-
 	padding: 10px 0;
-
 }
 
 
-
 .nav-mobile {
-
 	display: none;
-
 	width: 100%;
-
 }
 
 
 
 /* Show mobile menu on smaller screens */
-
 @media (max-width: 992px) {
-
 	.nav-mobile {
-
 		display: block;
-
 	}
-
 }
 
 
-
 /*  GO FULL WIDTH AT LESS THAN XXX PIXELS */
-
-
-
 @media (max-width: 991px) {
-
-
-
     header h1 {
-
         margin: 80px 0 20px!important;
-
         padding: 0 20px;
-
         font-size: 40px!important;
-
         color: #fff;
-
         display: inline-block;
-
         background-color: rgba(0,0,0,0.4); 
-
     }
-
     header h2 {
-
         margin: 30px 0 10px!important;
-
         padding: 0 20px;
-
         font-size: 20px!important;
-
         font-weight: 700;
-
         color: #fff;
-
     }
-
     header p {
-
         margin: 0 auto 30px;
-
         color: #fff;
-
         width: 90%!important;
-
     }
-
     .module-content {
-
         padding: 30px 20px;
-
     }
-
     .content {
-
         padding: 30px 10px;
-
     }
-
     nav {
-
         display: none!important;
-
     }
-
     .module img {
-
         width: 100%;
-
     }
-
-
-
 }
 
 
 
 .nav-mobile ul li {
-
 	display: block;
-
 	background: #2C2F36;
-
 	line-height: 50px;
-
 	border-top: 1px solid #E7BF3A;
-
 }
 
-
-
 .nav-mobile ul li a{
-
 	display: block;
-
 	color: #fff;
-
 }
 
 .nav-mobile ul li div {
-
 	color: #fff;
-
 	cursor: pointer;
-
 }
 
-
-
 .nav-mobile ul li div i {
-
 	margin-left: 10px;
-
 	font-size: 10px;
-
 }
 
 .nav-mobile ul li ul li{
-
 	background: #3f444a;
-
 	border: none;
-
 }
 
 /* Hide the mobile menu by default */
-
 .nav-mobile-menu {
-
     display: none;
-
     width: 100%;
-
-    /* Additional styles for hidden menu */
-
 }
 
 /* Show the mobile menu when active */
-
 .nav-mobile-menu.active {
-
     display: block; 
-
-    /* Additional styles for visible menu */
-
 }
 
 
 
 /* Hide all submenus by default */
-
 .nav-mobile-menu ul {
-
     display: none;
-
 }
 
 
 
 /* Show the submenu when the 'active' class is applied */
-
 .nav-mobile-menu li > ul.active {
-
     display: block;
-
 }
 
 /* Show nested menus when parent is active */
 
 .nav-mobile ul li.active > ul {
-
     display: block;
-
 }
 
 .nav-mobile-menu  img {
-
     width:48px;
-
     margin: 0 auto;
-
     vertical-align:middle;
-
     padding-top: 0;
-
     padding-bottom: 0;
-
 }
 
 .nav-mobile-menu  span {
-
-   
-
     padding-top: 0;
-
     padding-bottom: 0;
-
     line-height: 10px;
-
-
-
 }
 
 .subMenuHighlight {
-
     color: #2C2F36 !important;
-
     line-height: 20px;
-
     margin-bottom: 15px;
-
     font-weight: bold;
-
     font-size: 110%;
-
 }
 
 
@@ -411,60 +205,36 @@ section:after { clear: both; content: ""; display: block; height: 0; }
 
 
 /*  HEADER   ============================================================================= */
-
 header {
 
-
-
 	background-color: #ededed;
-
 	background-size: cover;
-
 	text-align: center;
-
 	border-bottom: 5px solid rgba(0,0,0,0.4);
-
 }
 
 .header-content {
-
 	padding-bottom: 150px;
-
-	
-
 }
 
 .logo {
 
 	display: inline-block;
-
 	margin-left: 20px;
-
     margin-bottom: 0px;
-
     margin-top: 0px;
-
-
 
 }
 
 .header-logo {
 
     width:64px !important ;
-
     padding-left:0px;
-
     padding-right:0px;
-
     padding-top:0px;
-
     padding-bottom:0px;
-
     vertical-align:middle;
-
     display: inline;
-
-
 
 }
 
@@ -473,6 +243,16 @@ nav .logo a {
 	color: #fff;
 
 }
+
+
+nav a:visited {
+	color: #ffffff;
+}
+
+nav a:visited:hover {
+	color: #E7BF3A;
+}
+
 
 nav {
 
