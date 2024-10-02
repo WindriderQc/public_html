@@ -108,9 +108,9 @@ STHSErrorIndex:
 
             <div class="col-mb-6 "> <?php include "components/Top5.php"; ?> </div> 
 
-            <div class="col-mb-6 "> <?php include "components/Top20FreeAgents.php"; ?> </div>   
+            <div class="col-mb-6 "> <?php include "components/LastGames.php"; ?> </div>   
 
-            <div class="col-mb-3 "> <?php include "components/LastGames.php"; ?> </div> 
+            <div class="col-mb-6 "> <?php include "components/Standing_2.php"; ?> </div> 
 
         </div>
 
