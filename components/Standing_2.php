@@ -283,31 +283,31 @@ Function PrintStandingTableRow($row, $TypeText, $StandardStandingOutput, $League
 
 	$Result = $dbS->querySingle($Query,true);
 
-	If ($Result['count'] > 0){
+	// If ($Result['count'] > 0){
 
-		$Query = "SELECT * FROM Schedule" . $TypeText . " WHERE (VisitorTeam = " . $row['Number'] . " OR HomeTeam = " . $row['Number'] . ") AND Play = 'False' ORDER BY GameNumber LIMIT 1";
+	// 	$Query = "SELECT * FROM Schedule" . $TypeText . " WHERE (VisitorTeam = " . $row['Number'] . " OR HomeTeam = " . $row['Number'] . ") AND Play = 'False' ORDER BY GameNumber LIMIT 1";
 
-		$ScheduleNext = $dbS->querySingle($Query,true);			
+	// 	$ScheduleNext = $dbS->querySingle($Query,true);			
 
-		If ($ScheduleNext['HomeTeam'] == $row['Number']){
+	// 	If ($ScheduleNext['HomeTeam'] == $row['Number']){
 
-			echo "<td> vs " . $ScheduleNext['VisitorTeamAbbre'] . "</td>";
+	// 		echo "<td> vs " . $ScheduleNext['VisitorTeamAbbre'] . "</td>";
 
-		}elseif($ScheduleNext['VisitorTeam'] == $row['Number']){
+	// 	}elseif($ScheduleNext['VisitorTeam'] == $row['Number']){
 
-			echo "<td> vs " . $ScheduleNext['HomeTeamAbbre'] . "</td>";
+	// 		echo "<td> vs " . $ScheduleNext['HomeTeamAbbre'] . "</td>";
 
-		}
+	// 	}
 
-	}else{
+	// }else{
 
-		echo "<td></td>";
+	// 	echo "<td></td>";
 
 	}
 
 	echo "</tr>\n"; /* The \n is for a new line in the HTML Code */
 
-}
+
 
 
 

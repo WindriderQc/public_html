@@ -132,7 +132,9 @@ If (isset($LeagueOwner) == False){$LeagueOwner = (string)"";}
 
 <?php include "components/GamesScroller.php"; ?>
 
-<?php include "components/ProTeamsBar.php" ?>
+<div class="desktop-only">
+    <?php include "components/ProTeamsBar.php" ?>
+</div>
 
 
 
@@ -178,43 +180,43 @@ if ($MenuQueryOK == True) {
 
     // Trades
 
-    if($CookieTeamNumber > 0) {
+    // if($CookieTeamNumber > 0) {
 
-        if ($CookieTeamNumber > 0){ $menuTradesItems .= "<li><a href=\"Upload.php\">" . $TopMenuLang['UploadLine'] . "</a></li>";}
+    //     if ($CookieTeamNumber > 0){ $menuTradesItems .= "<li><a href=\"Upload.php\">" . $TopMenuLang['UploadLine'] . "</a></li>";}
 
-        if ($LeagueOutputOptionMenu['ShowWebClientInDymanicWebsite'] == "True"){  $menuTradesItems .=  "<li><a href=\"WebClientIndex.php\">" . $TopMenuLang['WebClient'] . "</a></li>";}
+    //     if ($LeagueOutputOptionMenu['ShowWebClientInDymanicWebsite'] == "True"){  $menuTradesItems .=  "<li><a href=\"WebClientIndex.php\">" . $TopMenuLang['WebClient'] . "</a></li>";}
 
-        if ($LeagueWebClientMenu['AllowTradefromWebsite'] === "True" AND $LeagueGeneralMenu['TradeDeadLinePass'] === "False" AND $CookieTeamNumber > 0){ $menuTradesItems .=  "<li><a href=\"Trade.php\">". $TopMenuLang['Trade'] . "</a></li>";}
+    //     if ($LeagueWebClientMenu['AllowTradefromWebsite'] === "True" AND $LeagueGeneralMenu['TradeDeadLinePass'] === "False" AND $CookieTeamNumber > 0){ $menuTradesItems .=  "<li><a href=\"Trade.php\">". $TopMenuLang['Trade'] . "</a></li>";}
 
-        if ($LeagueWebClientMenu['AllowFreeAgentOfferfromWebsite'] === "True" AND $CookieTeamNumber <= 100){ $menuTradesItems .=  "<li><a style=\"width:400px;\" href=\"FreeAgentOffers.php\">" . $TopMenuLang['FreeAgentsOffer'] . "</a></li>";}
+    //     if ($LeagueWebClientMenu['AllowFreeAgentOfferfromWebsite'] === "True" AND $CookieTeamNumber <= 100){ $menuTradesItems .=  "<li><a style=\"width:400px;\" href=\"FreeAgentOffers.php\">" . $TopMenuLang['FreeAgentsOffer'] . "</a></li>";}
 
-        if ($LeagueWebClientMenu['AllowDraftSelectionfromWebsite'] === "True" AND $CookieTeamNumber <= 100 AND $LeagueGeneralMenu['OffSeason'] === "True" AND $LeagueGeneralMenu['EntryDraftStart'] === "True" AND $LeagueGeneralMenu['EntryDraftStop'] === "False" AND $LeagueGeneralMenu['FantasyDraftStart'] === "False"){ $menuTradesItems .=  "<li><a href=\"DraftSelection.php?EntryDraft\">" . $TopMenuLang['EntryDraftSelection'] . "</a></li>";}
+    //     if ($LeagueWebClientMenu['AllowDraftSelectionfromWebsite'] === "True" AND $CookieTeamNumber <= 100 AND $LeagueGeneralMenu['OffSeason'] === "True" AND $LeagueGeneralMenu['EntryDraftStart'] === "True" AND $LeagueGeneralMenu['EntryDraftStop'] === "False" AND $LeagueGeneralMenu['FantasyDraftStart'] === "False"){ $menuTradesItems .=  "<li><a href=\"DraftSelection.php?EntryDraft\">" . $TopMenuLang['EntryDraftSelection'] . "</a></li>";}
 
-        if ($LeagueWebClientMenu['AllowDraftSelectionfromWebsite'] === "True" AND $CookieTeamNumber <= 100 AND $LeagueGeneralMenu['OffSeason'] === "True" AND $LeagueGeneralMenu['EntryDraftStart'] === "False" AND $LeagueGeneralMenu['EntryDraftStop'] === "False" AND $LeagueGeneralMenu['FantasyDraftStart'] === "True"){ $menuTradesItems .=  "<li><a href=\"DraftSelection.php?FantasyDraft\">" . $TopMenuLang['FantasyDraftSelection'] . "</a></li>";}
+    //     if ($LeagueWebClientMenu['AllowDraftSelectionfromWebsite'] === "True" AND $CookieTeamNumber <= 100 AND $LeagueGeneralMenu['OffSeason'] === "True" AND $LeagueGeneralMenu['EntryDraftStart'] === "False" AND $LeagueGeneralMenu['EntryDraftStop'] === "False" AND $LeagueGeneralMenu['FantasyDraftStart'] === "True"){ $menuTradesItems .=  "<li><a href=\"DraftSelection.php?FantasyDraft\">" . $TopMenuLang['FantasyDraftSelection'] . "</a></li>";}
 
-        $menuTradesItems .=  "<li><a href=\"NewsManagement.php\">" . $TopMenuLang['LeagueNewsManagement'] . "</a></li>";
+    //     $menuTradesItems .=  "<li><a href=\"NewsManagement.php\">" . $TopMenuLang['LeagueNewsManagement'] . "</a></li>";
 
-        $menuTradesItems .=  "<li><a href=\"" . $LoginLink . "\">". $TopMenuLang['Logout'] . "</a></li>";
+    //     $menuTradesItems .=  "<li><a href=\"" . $LoginLink . "\">". $TopMenuLang['Logout'] . "</a></li>";
 
-    }elseif($DoNotRequiredLoginDynamicWebsite == TRUE){
+    // }elseif($DoNotRequiredLoginDynamicWebsite == TRUE){
 
-        $menuTradesItems .=  "<li><a href=\"Upload.php\">" . $TopMenuLang['UploadLine'] . "</a></li>";
+    //     $menuTradesItems .=  "<li><a href=\"Upload.php\">" . $TopMenuLang['UploadLine'] . "</a></li>";
 
-        if ($LeagueOutputOptionMenu['ShowWebClientInDymanicWebsite'] == "True"){ $menuTradesItems .=  "<li><a href=\"WebClientIndex.php\">" . $TopMenuLang['WebClient'] . "</a></li>";}
+    //     if ($LeagueOutputOptionMenu['ShowWebClientInDymanicWebsite'] == "True"){ $menuTradesItems .=  "<li><a href=\"WebClientIndex.php\">" . $TopMenuLang['WebClient'] . "</a></li>";}
 
-        $menuTradesItems .=  "<li><a href=\"Login.php\">". $TopMenuLang['Login'] . "</a></li>";
+    //     $menuTradesItems .=  "<li><a href=\"Login.php\">". $TopMenuLang['Login'] . "</a></li>";
 
-    }else{
+    // }else{
 
-        $menuTradesItems .=  "<li><a href=\"Login.php\">". $TopMenuLang['Login'] . "</a></li>";
+    //     $menuTradesItems .=  "<li><a href=\"Login.php\">". $TopMenuLang['Login'] . "</a></li>";
 
-    }
+    // }
 
-    If ($LeagueOutputOptionMenu['OutputCustomURL1'] != "" and $LeagueOutputOptionMenu['OutputCustomURL1Name'] != ""){ $menuTradesItems .=  "<li><a href=\"" . $LeagueOutputOptionMenu['OutputCustomURL1'] . "\">" . $LeagueOutputOptionMenu['OutputCustomURL1Name'] . "</a></li>\n";}
+    // If ($LeagueOutputOptionMenu['OutputCustomURL1'] != "" and $LeagueOutputOptionMenu['OutputCustomURL1Name'] != ""){ $menuTradesItems .=  "<li><a href=\"" . $LeagueOutputOptionMenu['OutputCustomURL1'] . "\">" . $LeagueOutputOptionMenu['OutputCustomURL1Name'] . "</a></li>\n";}
 
-    If ($LeagueOutputOptionMenu['OutputCustomURL2'] != "" and $LeagueOutputOptionMenu['OutputCustomURL2Name'] != ""){ $menuTradesItems .=  "<li><a href=\"" . $LeagueOutputOptionMenu['OutputCustomURL2'] . "\">" . $LeagueOutputOptionMenu['OutputCustomURL2Name'] . "</a></li>\n";}
+    // If ($LeagueOutputOptionMenu['OutputCustomURL2'] != "" and $LeagueOutputOptionMenu['OutputCustomURL2Name'] != ""){ $menuTradesItems .=  "<li><a href=\"" . $LeagueOutputOptionMenu['OutputCustomURL2'] . "\">" . $LeagueOutputOptionMenu['OutputCustomURL2Name'] . "</a></li>\n";}
 
-    If ($CookieTeamNumber == 102){ $menuTradesItems .=  "<li><a href=\"SendEmail.php\">" . $TopMenuLang['Email'] . "</a></li>";}
+    // If ($CookieTeamNumber == 102){ $menuTradesItems .=  "<li><a href=\"SendEmail.php\">" . $TopMenuLang['Email'] . "</a></li>";}
 
 
 
@@ -526,7 +528,7 @@ if ($MenuQueryOK == True) {
 
         <li><div> Stats  <i class="fa fa-chevron-right"></i></div><ul> <?php echo $menuStatsItems; ?> </ul></li>
 
-        <li><div> Trades <i class="fa fa-chevron-right"></i></div><ul> <?php echo $menuTradesItems; ?> </ul></li>
+        <!-- <li><div> Trades <i class="fa fa-chevron-right"></i></div><ul> <?php echo $menuTradesItems; ?> </ul></li> -->
 
         <li><div> Teams  <i class="fa fa-chevron-right"></i></div><ul> <?php echo $menuMobileTeamsItems; ?> </ul></li>
 

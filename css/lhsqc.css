@@ -1673,3 +1673,13 @@ li.activemain a,li.activemain a:hover{text-decoration:none;font-size:125%;color:
     float: left;
     vertical-align:middle;
 }
+
+.desktop-only {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .desktop-only {
+        display: block;
+    }
+}
