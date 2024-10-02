@@ -369,7 +369,7 @@ Function PrintStandingTableRow($row, $TypeText, $StandardStandingOutput, $League
 
 }
 
-.STHSPHPStanding_Table tbody td.staticTD {font-size:12pt;border-right:hidden; border-left:hidden;}
+.STHSPHPStanding_Table tbody td.staticTD {font-size:14pt;border-right:hidden; border-left:hidden;}
 
 
 
