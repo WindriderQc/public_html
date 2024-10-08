@@ -1,8 +1,10 @@
 
-- Enlever la div de logo de la version mobile
+- Standing AHL qui ne fonctionne pas
+- Ajouter lien boxscore dans le scroller et enlever la card latest score.
+- CSS Boxscore (J'ai copisé LHSQC dans Main) Nom des équipe devenu blanc
 - Actualisé la page active dans le menu pour que le bon menu soit indiqué en jaune, pas tjrs HOME.
 - Lien HOME du menu est noir sur noir dans HOME mais pas dans les autres pages... confirmer Requis.
-- Valider Card Latest Score  vs  GameScroller qui affiche les latest score - Duplicata
+- Pimper le look de la page tradetracker pour avoir les trades sur la même ligne au lieu de deux différentes (voir référence dans le folder idee)
 - Footer Menu - ajouter Farm league?
 - On dirait que les pages n'utilise pas toutes la meme db...  a valider car le contenu de GameScroller bar change selon les pages...
 
@@ -14,4 +16,5 @@
 Complété:
 - Fix trades qui ne fonctionne pas (FAITE DOM)
 - Fix Filtres dans players page qui ne fonctionne pas (YB)
-
+- Enlever la div de logo de la version mobile (Dom)
+- Valider Card Latest Score  vs  GameScroller qui affiche les latest score - Duplicata
