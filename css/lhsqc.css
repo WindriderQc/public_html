@@ -18,7 +18,7 @@ table p{display: inline;}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
 q:before,q:after{content:"";}
 a img { border:medium none;}
-img{border:medium none;display:inline;margin-right: 3%;}
+img{border:medium none;display:inline;margin-right: 3%;float: left;}
 a{color: #000; text-decoration:none;}
 a:hover {color: #E7BF3A;}
 strong{font-weight: bold;}
@@ -1351,7 +1351,7 @@ footer .module-content {
 
 
 
-.StarTable  {width: 100%;border-collapse: separate;border-spacing: 0;border-radius: 10px;-moz-border-radius: 10px;padding: 5px;margin-bottom: 5px;background-color: rgba(245,245,245,1)}
+.StarTable  {width: 100%;border-collapse: separate;border-spacing: 0;border-radius: 10px;-moz-border-radius: 10px;padding: 5px;margin-bottom: 5px;}
 
 .StarTable  th {font-weight: bold;font-size: 1.3em;padding: 15px;}
 

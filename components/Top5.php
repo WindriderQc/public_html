@@ -1,18 +1,18 @@
 <div class="card shadow-0 mb-3 frontpage-card top5Card  "  >
     <div class="card-header">Top Stars</div>
     <div class="card-body mt-0 pt-0 text-primary">
-    <div class="StarTableHeader"><img id="Top5" src="<?php echo $ImagesCDNPath;?>/images/top5.png" alt="Top 5"  ></div>                                   
+    <div class="StarTableHeader"></div>                                   
         <table class="StarTable">
                         <?php if(isset($LeagueGeneral)){
                         echo "<tr><th colspan=\"2\" class=\"STHSIndex_3StarNameHeader\">" . $IndexLang['ProGamesDaysStar'] . "</th></tr>";
-                        echo "<tr><td colspan=\"2\"><img src=\"" . $ImagesCDNPath . "/images/Star1.png\" alt=\"Star1\" style=\"width:25px;vertical-align:middle;padding-right:4px\" />" . $LeagueGeneral['Today3StarPro1'] . "</td></tr>";
-                        echo "<tr><td colspan=\"2\"><img src=\"" . $ImagesCDNPath . "/images/Star2.png\" alt=\"Star2\" style=\"width:25px;vertical-align:middle;padding-right:4px\" />" . $LeagueGeneral['Today3StarPro2'] . "</td></tr>";
-                        echo "<tr><td colspan=\"2\"><img src=\"" . $ImagesCDNPath . "/images/Star3.png\" alt=\"Star3\" style=\"width:25px;vertical-align:middle;padding-right:4px\" />" . $LeagueGeneral['Today3StarPro3'] . "</td></tr>";
+                        echo "<tr><td colspan=\"2\"><img src=\"" . $ImagesCDNPath . "/images/Star.png\" alt=\"Star1\" style=\"width:25px;vertical-align:middle;padding-right:4px\" />" . $LeagueGeneral['Today3StarPro1'] . "</td></tr>";
+                        echo "<tr><td colspan=\"2\"><img src=\"" . $ImagesCDNPath . "/images/Star.png\" alt=\"Star2\" style=\"width:25px;vertical-align:middle;padding-right:4px\" />" . $LeagueGeneral['Today3StarPro2'] . "</td></tr>";
+                        echo "<tr><td colspan=\"2\"><img src=\"" . $ImagesCDNPath . "/images/Star.png\" alt=\"Star3\" style=\"width:25px;vertical-align:middle;padding-right:4px\" />" . $LeagueGeneral['Today3StarPro3'] . "</td></tr>";
                         If ($LeagueOutputOption['ShowFarmScoreinPHPHomePage'] == 'True'){
                             echo "<tr><th colspan=\"2\" class=\"STHSIndex_3StarNameHeader\">" . $IndexLang['FarmGamesDaysStar'] . "</th></tr>";
-                            echo "<tr><td colspan=\"2\"><img src=\"" . $ImagesCDNPath . "/images/Star1.png\" alt=\"Star1\" style=\"width:25px;vertical-align:middle;padding-right:4px\" />" . $LeagueGeneral['Today3StarFarm1'] . "</td></tr>";
-                            echo "<tr><td colspan=\"2\"><img src=\"" . $ImagesCDNPath . "/images/Star2.png\" alt=\"Star2\" style=\"width:25px;vertical-align:middle;padding-right:4px\" />" . $LeagueGeneral['Today3StarFarm2'] . "</td></tr>";
-                            echo "<tr><td colspan=\"2\"><img src=\"" . $ImagesCDNPath . "/images/Star3.png\" alt=\"Star3\" style=\"width:25px;vertical-align:middle;padding-right:4px\" />" . $LeagueGeneral['Today3StarFarm3'] . "</td></tr>";
+                            echo "<tr><td colspan=\"2\"><img src=\"" . $ImagesCDNPath . "/images/Star.png\" alt=\"Star1\" style=\"width:25px;vertical-align:middle;padding-right:4px\" />" . $LeagueGeneral['Today3StarFarm1'] . "</td></tr>";
+                            echo "<tr><td colspan=\"2\"><img src=\"" . $ImagesCDNPath . "/images/Star.png\" alt=\"Star2\" style=\"width:25px;vertical-align:middle;padding-right:4px\" />" . $LeagueGeneral['Today3StarFarm2'] . "</td></tr>";
+                            echo "<tr><td colspan=\"2\"><img src=\"" . $ImagesCDNPath . "/images/Star.png\" alt=\"Star3\" style=\"width:25px;vertical-align:middle;padding-right:4px\" />" . $LeagueGeneral['Today3StarFarm3'] . "</td></tr>";
                         }}?>
                         <tr><th colspan="2" class="STHSTop5"><?php echo $IndexLang['Top5Point'];?></th></tr>
                         <tr><td class="STHSIndex_Top5PointNameHeader"><?php echo $PlayersLang['PlayerName'];?></td><td class="STHSIndex_Top5PointResultHeader">G-A-P</td></tr>
@@ -98,7 +98,7 @@
                         echo "<div class=\"Headshot\"><img loading=\"lazy\" src=\"" . $LeagueOutputOption['PlayersMugShotBaseURL'] . $Row['NHLID'] . "." . $LeagueOutputOption['PlayersMugShotFileExtension'] . "\" alt=\"" . $Row['Name']. "\" class=\"STHSPHPIndexLeadersHeadshot\" /></div>";}}
                         echo "</td><td>" . $Row['G'] . "-" . $Row['A'] . "-" . $Row['P'] . "</td></tr>\n";
                     }}?>
-                    <?php if(isset($LeagueGeneral)){
+                    <!-- <?php if(isset($LeagueGeneral)){
                     if (strlen($LeagueGeneral['Days73StarPro']) > 20){echo "<tr><th colspan=\"2\" class=\"STHSTop5\"><br /><br />" . $IndexLang['7DaysStar'] . "</th></tr><tr><td colspan=\"2\">" . str_replace("/", "<br />",$LeagueGeneral['Days73StarPro']) . "</td></tr>";}
                     if (strlen($LeagueGeneral['Days303StarPro']) > 20){echo "<tr><th colspan=\"2\" class=\"STHSTop5\"><br /><br />" . $IndexLang['30DaysStar'] . "</th></tr><tr><td colspan=\"2\">" . str_replace("/", "<br />",$LeagueGeneral['Days303StarPro']) . "</td></tr>";}
 
@@ -106,7 +106,7 @@
                         if (strlen($LeagueGeneral['Days73StarFarm']) > 20){echo "<tr><th colspan=\"2\" class=\"STHSTop5\"><br /><br />" . $TopMenuLang['FarmLeague'] . " : " . $IndexLang['7DaysStar'] . "</th></tr><tr><td colspan=\"2\">" . str_replace("/", "<br />",$LeagueGeneral['Days73StarFarm']) . "</td></tr>";}
                         if (strlen($LeagueGeneral['Days303StarFarm']) > 20){echo "<tr><th colspan=\"2\" class=\"STHSTop5\"><br /><br />" . $TopMenuLang['FarmLeague'] . " : " . $IndexLang['30DaysStar'] . "</th></tr><tr><td colspan=\"2\">" . str_replace("/", 	"<br />",$LeagueGeneral['Days303StarFarm']) . "</td></tr>";}
                     }
-                    }?>
+                    }?> -->
 
         </table>
               
