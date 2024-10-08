@@ -166,13 +166,19 @@ if ($MenuQueryOK == True) {
 
         $menuStatsItems .= "<li><a href=\"TodayGames.php?Type=2\">" . $DynamicTitleLang['Farm'] . " " . $TopMenuLang['TodaysGames'] . "</a></li>";
 
+
+
     } else {
 
         $menuStatsItems .= "<li><a href=\"TodayGames.php\">" . $TopMenuLang['TodaysGames'] . "</a></li>";
 
     }
 
+
+    $menuStatsItems .= "<li><a href=\"PlayersStat.php?Order=P&MinGP&Max=50\">" . $TopMenuLang['PlayersLeader'] . "</a></li>";
+    $menuStatsItems .= "<li><a href=\"GoaliesStat.php?Order=P&MinGP&Max=10\">" . $TopMenuLang['GoaliesLeader'] . "</a></li>";
     $menuStatsItems .= "<li><a href=\"Transaction.php?SinceLast\">" . $TopMenuLang['TodaysTransactions'] . "</a></li>";
+    
 
 
 
@@ -446,9 +452,9 @@ if ($MenuQueryOK == True) {
 
         <li><a href="#">Standings</a><ul>
 
-        <li><a href="Standing.php">LHSQC</a></li>
+            <li><a href="Standing.php">LHSQC</a></li>
 
-        <li><a href="Standing.php?Farm">AHL</a></li></ul>
+            <li><a href="Standing.php?Farm">AHL</a></li></ul>
 
         <li><a href="PlayersRoster.php">Players</a></li>
 
