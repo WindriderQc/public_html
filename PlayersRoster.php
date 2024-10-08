@@ -331,6 +331,7 @@ STHSErrorPlayerRoster:
 }}?>
 
 </head><body>
+<?php include "components/GamesScroller.php"; ?>
 
 <?php include "Menu.php";?>
 

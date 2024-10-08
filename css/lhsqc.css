@@ -1202,137 +1202,104 @@ footer .module-content {
 
 
 /***    Scroller   ***********************/
-
-
-
 .gamesScroller {
-
     z-index: 1;
-
     position: relative;
+}
 
+
+.gamesScroller div .active a {
+    text-transform: inherit ;
+    color: inherit !important;
+    font-weight: inherit ;
+    font-size: inherit ;
 }
 
 
 
 .scrollButtons {
-
     position: absolute;
-
     top: 50%;
-
     transform: translateY(-50%);
-
     z-index: 2;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: flex-start;
-
     pointer-events: none; /* Pass through events */
-
 }
-
-
 
 .scroll-container {
-
     overflow: hidden;  /* hides the scrollbar  */
-
     background: rgba(255, 255, 255);
-
     margin: 0px;
-
     position: relative;
-
     border-radius: 10px;
-
     height: auto; /* Adjust the height to fit content */
-
     display: flex;
-
     align-items: center; /* Center the content vertically */
-
 }
-
 
 
 .scrollDivTop, .scrollDivBot {
-
     height: 42px;
-
     width: 45px;
-
     cursor: pointer;
-
-    background: rgba(216, 215, 238, 255);
-
-   
-
+    background:  #E7BF3A; /* rgba(216, 215, 238, 1);*/
 }
 
 
 
 .scrollDivTop {
-
     border-top-left-radius: 10px;
-
 }
 
 
 
+
 .scrollDivBot {
-
     border-bottom-left-radius: 10px;
-
 }
 
 
 
 .scrollBtnRight {
-
     border-bottom-left-radius: 10px;
-
 }
 
 
 
 .scrollBtnLeft {
-
     border-top-left-radius: 10px;
-
 }
 
 
 
 .scrollBtn {
-
     background: none;
-
     border: none;
-
     cursor: pointer;
-
     margin: 0%;
-
     padding: 0%;
-
     pointer-events: auto; /* Allow interaction with buttons */
-
 }
 
+.scrollBtn:hover {
+    background:  #ffca1d; /* rgba(216, 215, 238, 1);*/
+}
 
 
 .scrollBtn img {
-
     width: 100%;
-
     height: 100%;
-
 }
 
+.scrollerBoxScore{
+    font-size:8px;
+    text-align:center;
+    font-weight:bold;
+    width: 100%;
+    padding: 2px !important;
+}
 
 
 
@@ -1451,9 +1418,18 @@ footer .module-content {
     border-right-style:solid;
     border-right-color:#cecece;
     border-right-width:1px;
-
+    
 }
 
+.pastGame {
+    /*background-color: rgba(32, 32, 32, 0.315) ;*/
+    border-radius: 0%;
+}
+
+.upcomingGame {
+    background-color: #E7BF3A !important; /* rgba(241, 200, 18, 0.904) ;*/
+    border-radius: 0%;
+}
 
 
 .roster-container {

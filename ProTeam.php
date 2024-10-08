@@ -317,7 +317,7 @@ if (empty($LeagueGeneral) == false){If ($LeagueGeneral['OffSeason'] == "True"){e
 
 
 <header>
-    
+<?php include "components/GamesScroller.php"; ?>	 
 <?php include "Menu.php"; ?>	
   <div class="container p-2">  
 

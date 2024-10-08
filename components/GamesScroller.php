@@ -11,50 +11,73 @@
         </div>
         <div class=" ">    
             <div class="scroll-container" id="boxscore">
-                <table class="STHSTodayGame_MainTable">
+                <table class="table py-0 my-0">
                         <td style="background:white;width:43px;height:84px;display:block"><br></td>
                         
                         <?php
+                        // Add Latest Games with scores to gameScroller.
                         $i = 0;
                         if (empty($LatestScore) == false) {
+                            while ($row = $LatestScore->fetchArray()) {  ?>
 
-                         
-                            while ($row = $LatestScore->fetchArray()) {
-                                echo "<td class=\"STHSTodayGame_GameOverall GameDayTable\">";
-                                echo "<table class=STHSTodayGame_GameData style=margin-left:4px>";
-                                echo "<tr style=\"font-size:10px;color:#383732;font-weight:bold;line-height:15px;\"> <td> Day " . $row['Day'] . " - #" . $row['GameNumber'] . "</td></tr>";
-                                echo "<tr style=line-height:0px;color:#2a2a2a;font-weight:bold;margin:0px;font-size:14px>";
-                                echo "<td><span><img src=\"" . $ImagesCDNPath . "/images/" . $row['VisitorTeamThemeID'] . ".png\" alt=\"\" style=width:24px;vertical-align:middle;padding-right:4px></span>";
-                                echo $row['VisitorTeamAbbre'];
-                                echo "</td><td style=width:55px;font-size:20px;text-align:center;font-weight:bold>";
-                                echo $row['VisitorScore'] . "</td></tr>";
-                                echo "<tr style=line-height:0px;color:#2a2a2a;font-weight:bold;margin:0px;font-size:14px>";
-                                echo "<td><span><img src=\"" . $ImagesCDNPath . "/images/" . $row['HomeTeamThemeID'] . ".png\" alt=\"\" style=width:24px;vertical-align:middle;padding-right:4px></span>";
-                                echo $row['HomeTeamAbbre'];
-                                echo "</td><td style=width:55px;font-size:20px;text-align:center;font-weight:bold>";
-                                echo $row['HomeScore'] . "</td></tr>";
-                                echo "</table></td>";
+                                <td class="GameDayTable pastGame">
+                                    <table class="" style="margin-left:4px;">
+                                        <tr style="font-size:10px;color:#383732;font-weight:bold;line-height:15px; padding:5px;"> <td><?php echo "Day" . $row['Day'] . " - #" . $row['GameNumber']; ?></td></tr>
+                                        <tr style="line-height:20px;color:#2a2a2a;font-weight:bold;margin:0px;font-size:14px;">
+                                            <td>
+                                                <span><img src= <?php echo $ImagesCDNPath . "/images/" . $row['VisitorTeamThemeID'] . ".png"; ?> alt="" style="width:24px;vertical-align:middle;padding-right:4px;padding-bottom:0px;"></span>
+                                                <?php echo $row['VisitorTeamAbbre']; ?> 
+                                            </td>
+                                            <td style="font-size:20px;text-align:center;font-weight:bold;"><?php echo $row['VisitorScore']; ?></td>
+                                        </tr>
+                                        <tr style="line-height:20px;color:#2a2a2a;font-weight:bold;margin:0px;font-size:14px;">
+                                            <td>
+                                                <span><img src= <?php echo $ImagesCDNPath . "/images/" . $row['HomeTeamThemeID']    . ".png"; ?> alt="" style="width:24px;vertical-align:middle;padding-right:4px;"></span>
+                                                <?php echo $row['HomeTeamAbbre']; ?>
+                                            </td>
+                                            <td style="font-size:20px;text-align:center;font-weight:bold;"> <?php echo $row['HomeScore']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td  class="scrollerBoxScore">
+                                                <?php echo "<a href=\"" . $row['Link'] ."\">" . $IndexLang['BoxScore'] .  "</a>"; ?>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                
+                                <?php
+                               
                                 $i = $i+1;
                             }
                         }
                         ?>
 
                         <?php
+                        //  Add next games schedule to gameScroller.
                         if (empty($Schedule) == false) {
-                            while ($row = $Schedule->fetchArray()) {
-                                echo "<td class=\"STHSTodayGame_GameOverall GameDayTable\"><table class=\"STHSTodayGame_GameData\" style=\"margin-left:4px\">";
-                                echo "<tr style=\"font-size:10px;color:#383732;font-weight:bold;line-height:15px;\"><td>Thu, Oct 10</td></tr>";
-                                echo "<tr style=line-height:0px;color:#2a2a2a;font-weight:bold;margin:0px;font-size:14px><td><span>";
-                                if ($row['VisitorTeamThemeID'] > 0) {
-                                    echo "<img src=\"" . $ImagesCDNPath . "/images/" . $row['VisitorTeamThemeID'] . ".png\" alt=\"\" style=width:24px;vertical-align:middle;padding-right:4px></span>";
-                                }
-                                echo $row['VisitorTeamAbbre'] . "</td><td style=width:55px;font-size:20px;text-align:center;font-weight:bold>-</td></tr>";
-                                echo "<tr style=line-height:0px;color:#2a2a2a;font-weight:bold;margin:0px;font-size:14px><td><span>";
-                                if ($row['HomeTeamThemeID'] > 0) {
-                                    echo "<img src=\"" . $ImagesCDNPath . "/images/" . $row['HomeTeamThemeID'] . ".png\" alt=\"\" style=width:24px;vertical-align:middle;padding-right:4px></span>";
-                                }
-                                echo $row['HomeTeamAbbre'] . "</td><td style=width:55px;font-size:20px;text-align:center;font-weight:bold>-</td></tr>";
-                                echo "</table></td>";
+                            while ($row = $Schedule->fetchArray()) { ?>
+
+                                <td class=" GameDayTable upcomingGame">
+                                    <table class="" style="margin-left:4px">
+                                        <tr style="font-size:10px;color:#383732;font-weight:bold;"><td>Thu, Oct 10!!!</td></tr>
+                                        <tr style="line-height:20px;color:#2a2a2a;font-weight:bold;margin:0px;font-size:14px;">
+                                            <td>
+                                                <span><img src= <?php echo $ImagesCDNPath . "/images/" . $row['VisitorTeamThemeID'] . ".png"; ?> alt="" style="width:24px;vertical-align:middle;padding-right:4px;"></span>
+                                                <?php echo $row['VisitorTeamAbbre'];  ?>
+                                            </td> 
+                                            <td style="font-size:20px;text-align:center;font-weight:bold;">-</td>
+                                        </tr>
+                                        <tr style="line-height:20px;color:#2a2a2a;font-weight:bold;margin:0px;font-size:14px;">
+                                            <td>
+                                                <span><img src= <?php echo $ImagesCDNPath . "/images/" . $row['HomeTeamThemeID'] . ".png"; ?> alt="" style="width:24px;vertical-align:middle;padding-right:4px;"></span>
+                                                <?php echo $row['HomeTeamAbbre'] ?>
+                                            </td>
+                                            <td style=font-size:20px;text-align:center;font-weight:bold>-</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <?php  
                                 $i = $i+1;
                             }
                         }
@@ -62,6 +85,7 @@
 
                         
                         <?php
+                        //  There are no game in Database...  display generic message.
                         if ($i == 0) {
 
                             echo "<td class=\"STHSTodayGame_GameOverall GameDayTable\">";
@@ -81,8 +105,8 @@
     
 
    
-    <script>
-          var boxscore = document.getElementById('boxscore');
+<script>
+    var boxscore = document.getElementById('boxscore');
     var startX, scrollLeft, isDown = false;
 
     // Button click functionality
@@ -144,4 +168,4 @@
         var walk = (x - startX) * 2; // Adjust the multiplier for faster/slower scrolling
         boxscore.scrollLeft = scrollLeft - walk;
     });
-    </script>
+</script>

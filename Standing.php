@@ -396,6 +396,7 @@ if ($Playoff == True){
 
 
 </head><body>
+<?php include "components/GamesScroller.php"; ?>
 
 <?php include "Menu.php";?>
 

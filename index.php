@@ -1,7 +1,6 @@
 <?php include "Header.php"; ?>
 
 <?php 
-
 If ($lang == "fr") include 'LanguageFR-Main.php';
 else include 'LanguageEN-Main.php';
 
@@ -66,91 +65,39 @@ try{
 	$IndexQueryOK = True;
 
 } catch (Exception $e) {
-
 STHSErrorIndex:
-
 	$LeagueName = $DatabaseNotFound;
 	$Transaction = Null;
 	$Schedule = Null;
 	$LeagueGeneral = Null;
 	$LeagueOutputOption = Null;
-
 	echo "<title>" . $DatabaseNotFound . "</title>";
 	echo "<style>";
 	echo ".STHSIndex_Main{display:none;}";
 	echo "#cssmenu{display:none;}";
     echo "</style>";
-
 }}
 
 ?>
-
-
 </head>
 <body>
 
 <div class="container-fluid p-0 m-0">   
-<header>
-
-<?php include "Menu.php"; ?>	
-
-
-
-    <div class="clearfix header-content" style="display:inline-block;">
-
-	    <div class="row mt-2  mx-2 " >
-
-            <div class="col-mb-6 "> <?php include "components/TopHeadlines.php"; ?> </div>
-
-        </div>
-
-        <div class="row mt-2  mx-2 row-cols-1 row-cols-md-2 row-cols-lg-3" >
-
-            <div class="col-mb-6 "> <?php include "components/Top5.php"; ?> </div> 
-
-            <div class="col-mb-6 "> <?php include "components/LastGames.php"; ?> </div>   
-
-            <div class="col-mb-6 "> <?php include "components/Standing_2.php"; ?> </div> 
-
-        </div>
-
-	</div>
-
-</header>
-
-
-
-
-
-
-
-<!--<section class="sport-news">
-
-    <main class="mt-5 text-white" data-mdb-theme="dark">
-
-        <div class="container">
-
-            <div class="STHSIndex_NewsTD">
-
-                <div class="STHSIndex_TheNews"><?php echo $LeagueName . $IndexLang['News'];?></div>
-
-                <div class="STHSIndex_NewsDiv"><?php include "NewsSub.php";?></div>
-
-                <br /><br />
-
+    <header>
+        <?php include "components/GamesScroller.php"; ?>
+        <?php include "Menu.php"; ?>	
+        <div class="clearfix header-content" style="display:inline-block;">
+            <div class="row mt-2  mx-2 " >
+                <div class="col-12 "> <?php include "components/TopHeadlines.php"; ?> </div>
             </div>
 
+            <div class="row mt-2  mx-2 " >
+                <div class="col-lg-5 col-12 "> <?php include "components/Top5.php"; ?> </div>   
+                <div class="col-lg-7 col-12"> <?php include "components/Standing_2.php"; ?> </div> 
+            </div>
         </div>
-
-    </main>
-
-</section>-->
-
-
-
-</div>
-
-
+    </header>
+</div> <!-- container-fluid -->
 
 <?php include "Footer.php"; ?>
 

@@ -128,10 +128,6 @@ If (isset($LeagueOwner) == False){$LeagueOwner = (string)"";}
 
 
 
-
-
-<?php include "components/GamesScroller.php"; ?>
-
 <div class="desktop-only">
     <?php include "components/ProTeamsBar.php" ?>
 </div>
