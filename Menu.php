@@ -534,12 +534,11 @@ if ($MenuQueryOK == True) {
 
         <li><div> Teams  <i class="fa fa-chevron-right"></i></div><ul> <?php echo $menuMobileTeamsItems; ?> </ul></li>
 
-        <><div> GM's Corner  <i class="fa fa-chevron-right"></i></div><ul>
+        <li><div> GM's Corner  <i class="fa fa-chevron-right"></i></div><ul>
 
                                 <a class=" " href="WebClientRoster.php?TeamID=<?php echo $CookieTeamNumber ?>">Roster Editor</a>
 
-                                <a class=" " href="WebClientLines.php?TeamID=<?php echo $CookieTeamNumber ?>">Lines Editor</a>
-
+                                <a class=" " href="WebClientLines.php?TeamID=<?php echo $CookieTeamNumber ?>">Lines Editor NHL</a>
                                 <a class=" " href="WebClientLines.php?League=Farm&TeamID=<?php echo $CookieTeamNumber ?>">Lines Editor AHL</a>
 
                                 <a class=" " href="TeamSalaryCapDetail.php?TeamID=<?php echo $CookieTeamNumber ?>">Contract Overview</a></li>
