@@ -225,7 +225,7 @@ Function PrintStandingTableRow($row, $TypeText, $StandardStandingOutput, $League
 
 	If ($row['TeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $row['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPStandingTeamImage\" />";}
 
-	echo "<a href=\"" . $TypeText . "Team.php?Team=" . $row['Number'] . "\">" . $row['Name'] . "</a>";
+	echo "<div class=\"darkText\"><a href=\"" . $TypeText . "Team.php?Team=" . $row['Number'] . "\">" . $row['Name'] . "</a></div>";
 
 	if($row['StandingPlayoffTitle']=="E"){echo " - E ";
 
